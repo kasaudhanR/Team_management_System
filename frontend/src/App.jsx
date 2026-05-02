@@ -6,7 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Projects from "./pages/Projects";
 import Tasks from "./pages/Tasks";
 
-// 🔐 Protected Route Component
+
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem("token");
 
@@ -22,11 +22,11 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        {/* 🔓 Public Routes */}
+        
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
-        {/* 🔐 Protected Routes */}
+      
         <Route
           path="/dashboard"
           element={
@@ -54,7 +54,7 @@ function App() {
           }
         />
 
-        {/* 🔁 Redirect unknown routes */}
+    
         <Route path="*" element={<Navigate to="/" />} />
 
       </Routes>

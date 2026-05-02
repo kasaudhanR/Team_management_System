@@ -10,7 +10,7 @@
   color: #1e293b;
 }
 
-/* 📊 Stats Grid */
+
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -41,12 +41,12 @@
   font-weight: bold;
 }
 
-/* Colors */
+
 .green { color: #16a34a; }
 .orange { color: #f59e0b; }
 .red { color: #dc2626; }
 
-/* 📋 Task Section */
+
 .section {
   margin-top: 20px;
 }

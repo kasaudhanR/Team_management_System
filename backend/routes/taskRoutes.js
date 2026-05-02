@@ -11,16 +11,16 @@ import {
 
 const router = express.Router();
 
-// 🔐 Admin only
+
 router.post("/", auth, role("admin"), createTask);
 
-// 🔐 All logged users
+
 router.get("/", auth, getTasks);
 
-// 🔐 Assigned member or admin
+
 router.put("/:id", auth, updateTask);
 
-// 🔐 Admin only
+
 router.delete("/:id", auth, role("admin"), deleteTask);
 
 export default router;

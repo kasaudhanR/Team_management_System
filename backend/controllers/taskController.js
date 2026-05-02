@@ -1,7 +1,7 @@
 import Task from "../models/Task.js";
 import Project from "../models/Project.js";
 
-// ✅ CREATE TASK (Admin only)
+
 export const createTask = async (req, res) => {
   try {
     const { title, description, projectId, assignedTo, dueDate } = req.body;
@@ -10,7 +10,7 @@ export const createTask = async (req, res) => {
       return res.status(400).json({ msg: "Required fields missing" });
     }
 
-    // Check project exists
+
     const project = await Project.findById(projectId);
     if (!project) {
       return res.status(404).json({ msg: "Project not found" });
@@ -31,7 +31,7 @@ export const createTask = async (req, res) => {
   }
 };
 
-// ✅ GET TASKS (Admin sees all, Member sees assigned)
+
 export const getTasks = async (req, res) => {
   try {
     let filter = {};
@@ -40,7 +40,7 @@ export const getTasks = async (req, res) => {
       filter.assignedTo = req.user.id;
     }
 
-    // Optional: filter by project
+  
     if (req.query.projectId) {
       filter.projectId = req.query.projectId;
     }
@@ -56,7 +56,7 @@ export const getTasks = async (req, res) => {
   }
 };
 
-// ✅ UPDATE TASK (status change)
+
 export const updateTask = async (req, res) => {
   try {
     const { status } = req.body;
@@ -66,7 +66,7 @@ export const updateTask = async (req, res) => {
       return res.status(404).json({ msg: "Task not found" });
     }
 
-    // Member can only update their own task
+    
     if (
       req.user.role === "member" &&
       task.assignedTo.toString() !== req.user.id
@@ -84,7 +84,7 @@ export const updateTask = async (req, res) => {
   }
 };
 
-// ✅ DELETE TASK (Admin only)
+
 export const deleteTask = async (req, res) => {
   try {
     const task = await Task.findByIdAndDelete(req.params.id);

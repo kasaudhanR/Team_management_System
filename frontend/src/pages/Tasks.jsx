@@ -40,7 +40,7 @@ export default function Tasks() {
     }
   };
 
-  // ➕ CREATE TASK
+
   const handleCreate = async (e) => {
     e.preventDefault();
 
@@ -62,13 +62,13 @@ export default function Tasks() {
     fetchData();
   };
 
-  // 🔄 UPDATE STATUS
+
   const updateStatus = async (id, status) => {
     await API.put(`/tasks/${id}`, { status });
     fetchData();
   };
 
-  // ❌ DELETE TASK
+  
   const deleteTask = async (id) => {
     await API.delete(`/tasks/${id}`);
     fetchData();
@@ -83,7 +83,7 @@ export default function Tasks() {
 
         {error && <p className={styles.error}>{error}</p>}
 
-        {/* CREATE TASK */}
+        
         {user?.role === "admin" && (
         <div className={styles.formCard}>
           <h2>Create Task</h2>
@@ -146,7 +146,7 @@ export default function Tasks() {
         </div>
         )}
 
-        {/* TASK LIST */}
+        
         <div className={styles.grid}>
           {tasks.map((task) => (
             <div key={task._id} className={styles.card}>

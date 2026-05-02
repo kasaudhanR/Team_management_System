@@ -22,7 +22,7 @@ export default function Login() {
     e.preventDefault();
     setError("");
 
-    // ✅ Basic validation
+    
     if (!form.email || !form.password) {
       setError("Email and password are required");
       return;
@@ -33,10 +33,10 @@ export default function Login() {
 
       const res = await API.post("/auth/login", form);
 
-      // ✅ Store token
+    
       localStorage.setItem("token", res.data.token);
 
-      // (Optional) store user info
+      
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
       alert(res.data.msg || "Login successful");

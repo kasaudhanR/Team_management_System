@@ -1,6 +1,6 @@
 import Project from "../models/Project.js";
 
-// ✅ CREATE PROJECT (Admin only)
+
 export const createProject = async (req, res) => {
   try {
     const { title, description, members } = req.body;
@@ -23,7 +23,7 @@ export const createProject = async (req, res) => {
   }
 };
 
-// ✅ GET PROJECTS (Admin + Member)
+
 export const getProjects = async (req, res) => {
   try {
     const projects = await Project.find({
@@ -42,7 +42,7 @@ export const getProjects = async (req, res) => {
   }
 };
 
-// ✅ ADD MEMBER TO PROJECT (Admin only)
+
 export const addMember = async (req, res) => {
   try {
     const { userId } = req.body;
@@ -53,7 +53,7 @@ export const addMember = async (req, res) => {
       return res.status(404).json({ msg: "Project not found" });
     }
 
-    // avoid duplicate member
+    
     if (project.members.includes(userId)) {
       return res.status(400).json({ msg: "User already a member" });
     }
@@ -68,7 +68,7 @@ export const addMember = async (req, res) => {
   }
 };
 
-// ✅ DELETE PROJECT (Admin only)
+
 export const deleteProject = async (req, res) => {
   try {
     const project = await Project.findByIdAndDelete(req.params.id);

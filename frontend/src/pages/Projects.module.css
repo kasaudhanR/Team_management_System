@@ -9,7 +9,6 @@
   margin-bottom: 20px;
 }
 
-/* Sections */
 .section {
   background: white;
   padding: 20px;
@@ -18,7 +17,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* Form */
+
 .form {
   display: flex;
   gap: 10px;
@@ -39,7 +38,7 @@
   border-radius: 6px;
 }
 
-/* Member box */
+
 .memberBox {
   display: flex;
   gap: 10px;
@@ -59,7 +58,7 @@
   cursor: pointer;
 }
 
-/* Project Grid */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -95,7 +94,7 @@
   font-size: 12px;
 }
 
-/* Delete button */
+
 .delete {
   margin-top: 10px;
   background: #dc2626;
@@ -106,7 +105,7 @@
   border-radius: 6px;
 }
 
-/* Error */
+
 .error {
   color: red;
   text-align: center;

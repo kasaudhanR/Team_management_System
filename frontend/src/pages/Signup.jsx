@@ -25,7 +25,7 @@ export default function Signup() {
 
     setError("");
 
-    // ✅ Basic validation
+    
     if (!form.name || !form.email || !form.password) {
       setError("All fields are required");
       return;
@@ -38,7 +38,7 @@ export default function Signup() {
 
       alert(res.data.msg || "Signup successful");
 
-      navigate("/"); // redirect to login
+      navigate("/"); 
 
     } catch (err) {
       setError(err.response?.data?.msg || "Signup failed");

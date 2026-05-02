@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 
-// ✅ GET ALL USERS (for assigning members)
+
 export const getUsers = async (req, res) => {
   try {
     const users = await User.find().select("_id name email role");

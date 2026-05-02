@@ -37,7 +37,7 @@ export default function Projects() {
     }
   };
 
-  // ➕ CREATE PROJECT
+  
   const handleCreate = async (e) => {
     e.preventDefault();
 
@@ -50,7 +50,7 @@ export default function Projects() {
     fetchProjects();
   };
 
-  // ➕ ADD MEMBER
+  
   const handleAddMember = async () => {
     if (!selectedProject || !selectedUser) {
       return setError("Select project & user");
@@ -65,7 +65,7 @@ export default function Projects() {
     fetchProjects();
   };
 
-  // ❌ DELETE PROJECT
+  
   const handleDelete = async (id) => {
     await API.delete(`/projects/${id}`);
     fetchProjects();
@@ -80,7 +80,7 @@ export default function Projects() {
 
         {error && <p className={styles.error}>{error}</p>}
 
-        {/* CREATE PROJECT */}
+        
        {user?.role === "admin" && ( 
         <div className={styles.section}>
           <h2>Create Project</h2>
@@ -108,7 +108,7 @@ export default function Projects() {
        )}
 
 
-        {/* ADD MEMBER */}
+        
 
         {user?.role === "admin" && (
         <div className={styles.section}>
@@ -144,7 +144,7 @@ export default function Projects() {
         </div>
         )}
 
-        {/* PROJECT LIST */}
+      
         <div className={styles.grid}>
           {projects.map((p) => (
             <div key={p._id} className={styles.card}>

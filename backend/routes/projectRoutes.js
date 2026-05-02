@@ -11,16 +11,15 @@ import {
 
 const router = express.Router();
 
-// 🔐 Admin only
 router.post("/", auth, role("admin"), createProject);
 
-// 🔐 Admin + Member
+
 router.get("/", auth, getProjects);
 
-// 🔐 Admin only
+
 router.put("/:id/add-member", auth, role("admin"), addMember);
 
-// 🔐 Admin only
+
 router.delete("/:id", auth, role("admin"), deleteProject);
 
 export default router;

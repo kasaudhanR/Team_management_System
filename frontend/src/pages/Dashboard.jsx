@@ -37,7 +37,7 @@ export default function Dashboard() {
       <div className={styles.container}>
         <h1 className={styles.title}>Dashboard</h1>
 
-        {/* 📊 Stats */}
+        
         <div className={styles.statsGrid}>
           <div className={styles.card}>
             <h3>Total Tasks</h3>
@@ -65,7 +65,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* 📋 Recent Tasks */}
+        
         <div className={styles.section}>
           <h2>Recent Tasks</h2>
 
