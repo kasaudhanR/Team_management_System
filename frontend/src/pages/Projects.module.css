@@ -1,0 +1,113 @@
+.container {
+  padding: 25px;
+  background: #f1f5f9;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Sections */
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Form */
+.form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px;
+}
+
+.form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Member box */
+.memberBox {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.memberBox select {
+  padding: 10px;
+}
+
+.memberBox button {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Project Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.members {
+  margin-top: 10px;
+}
+
+.memberList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.memberList span {
+  background: #e2e8f0;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* Delete button */
+.delete {
+  margin-top: 10px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Error */
+.error {
+  color: red;
+  text-align: center;
+}
